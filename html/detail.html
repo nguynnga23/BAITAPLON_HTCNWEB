@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="../images/favicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Cửa hàng sách</title>
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/bootstrap.js"></script>
+ 
+  <!-- font awesome style -->
+  <link href="../css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="../css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../css/responsive.css" rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+  <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.css">
+
+  <style>
+   
+    .buttons_added {
+        opacity:1;
+        display:inline-block;
+        display:-ms-inline-flexbox;
+        display:inline-flex;
+        white-space:nowrap;
+        vertical-align:top;
+    }
+    .is-form {
+        overflow:hidden;
+        position:relative;
+        background-color:#f9f9f9;
+        height:2.2rem;
+        width:1.9rem;
+        padding:0;
+        text-shadow:1px 1px 1px #fff;
+        border:1px solid #ddd;
+    }
+    .is-form:focus,.input-text:focus {
+        outline:none;
+    }
+    .is-form.minus {
+        border-radius:4px 0 0 4px;
+    }
+    .is-form.plus {
+        border-radius:0 4px 4px 0;
+    }
+    .input-qty {
+        background-color:#fff;
+        height:2.2rem;
+        text-align:center;
+        font-size:1rem;
+        display:inline-block;
+        vertical-align:top;
+        margin:0;
+        border-top:1px solid #ddd;
+        border-bottom:1px solid #ddd;
+        border-left:0;
+        border-right:0;
+        padding:0;
+    }
+    .input-qty::-webkit-outer-spin-button,.input-qty::-webkit-inner-spin-button {
+        -webkit-appearance:none;
+        margin:0;
+    }
+
+  </style>
+  
+</head>
+
+<body class="sub_page">
+
+  <header id="header">
+  </header>
+ 
+   <script>
+     $(function(){
+       $("#header").load("header.html");
+     });
+   </script>
+
+  <!-- detail section -->
+
+  <section class="catagory_section">
+    <div class="catagory_container">
+      <div class="container ">
+        <div class="link text-muted">
+          <a class="text-muted" href="../html/index.html">HOME</a> \
+          <a class="text-muted" href="../html/categories.html">BOOKS CATEGORIES</a> 
+          <!-- <a href="../html/BOOK_truyencamhung.html">SÁCH TRUYỀN CẢM HỨNG</a> -->
+        </div>
+        <div class="row sm-4" >
+          <div class="col-sm-6 border-right text-center">
+            <img src="../images/sach/NhungViThanNuocMy.jpg" alt="" height="500px" id="imgProduct">
+          </div>
+
+          <div class="col-sm-6">
+            <p>Tác giả: <span class="text-info">Neil Gaiman</span> </p> 
+            <h3 id="nameProduct">Những Vị Thần Nước Mỹ </h3>
+            <div class="rating mb-2">
+              <img src="../images/star.png" alt="">
+              <img src="../images/star.png" alt="">
+              <img src="../images/star.png" alt="">
+              <img src="../images/star.png" alt="">
+              <img src="../images/star.png" alt="">
+              <span class="text-muted">(Xem 425 đánh giá) | Đã bán 2069</span>
+            </div>
+
+            <div class="price_book bg-light rounded mb-2 pb-2 pt-2">
+              <h2 class="text-danger" id="priceProduct">162.500 <span><u>đ</u></span></h2>
+              <span><strike>250000 <span><u>đ</u></span></strike></span>
+              <span class="text-danger"><b>-35%</b></span>
+            </div>
+             <hr>
+            <div class="discount mb-1">
+              <p><b>1 Mã Giảm Giá</b></p>
+              <div>
+                <button class="btn btn-success"><b>Giảm 25K</b></button>
+              </div>
+            </div>
+             <hr>
+            
+            <div class="amount  mb-5">
+                <p><b>Số Lượng</b></p>
+                <div class="buttons_added">
+                  <input class="minus is-form" type="button" value="-">
+                  <input aria-label="quantity" class="input-qty" max="30" min="1" name="" type="number" value="1" id="quantityProduct">
+                  <input class="plus is-form" type="button" value="+">
+                </div>
+            </div>
+
+            <div class="button_buy">
+              <!-- <button class="btn w-50 mr-4" id="addToCart">Thêm Vào Giỏ Hàng</button> -->
+              <button class="btn w-25"><a href="../html/cart.html">Add to cart</a></button>
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <!-- Thông tin chi tiết -->
+        <h2>Thông Tin Chi Tiết</h2>
+        <div class="row mb-4 mt-4">
+          <div class="col-sm-4 bg-light p-3">
+              <p><b>Công ty phát hành</b></p>
+              <p><b>Ngày sản xuất</b></p>
+              <p><b>Kích thước</b></p>
+              <p><b>Dịch giả</b></p>
+              <p><b>Loại bìa</b></p>
+              <p><b>Số trang</b></p>
+              <p><b>Nhà sản xuất</b></p>
+
+          </div>
+
+          <div class="col-sm-8 p-3">
+            <p>Nhã Nam</p>
+            <p class="bg-light">2021-12-01 00:00:00</p>
+            <p>15.5 x 24 cm</p>
+            <p class="bg-light">Lê Minh Đức</p>
+            <p>Bìa mềm</p>
+            <p class="bg-light">648</p>
+            <p>Nhà Xuất Bản Phụ Nữ Việt Nam</p>
+          </div>
+        </div>
+        <hr>
+        <!-- Mô tả sản phẩm -->
+        <h2>Mô Tả Sản Phẩm</h2>
+        <div class="row mb-4 mt-4 p-3">
+          <p>
+            “Độc đáo, cuốn hút, và sáng tạo bất tận.” <br>
+            - George R. R. Martin, tác giả của Trò chơi vương quyền - <br>
+            “Những vị thần nước Mỹ đã thành công trong việc tái sáng tạo, cũng như khẳng định tầm quan trọng lâu dài của văn chương kỳ ảo trong thời đại ngày nay.” <br> <br>
+            - Michael Chabon - br
+            Shadow sắp sửa mãn hạn tù. Anh khấp khởi nghĩ về thời khắc phóng thích sắp đến, về một cuộc sống giản dị êm đềm bên cạnh người vợ mà anh yêu tha thiết. Nhưng ngày ra tù, anh biết tin vợ mình vừa qua đời trong một tai nạn giao thông, và trên máy bay anh gặp một ông già tự xưng là Wednesday đòi thuê anh làm vệ sĩ. Theo một lối dần dà nhưng chắc chắn, mềm mại nhưng khôn cưỡng, Shadow bị cuốn vào một trận chiến kinh thiên động địa của các vị thần giữa lòng nước Mỹ hiện đại. <br> <br>
+            Hiếm nhà văn nào có thể tạo ra được một thế giới hư cấu vừa chân thực lại vừa kỳ ảo, vừa phức tạp lại vừa cuốn hút được như Neil Gaiman. Một cách khéo léo và tinh vi, Neil Gaiman lồng vào bên dưới bề mặt thực tại vô cùng gần gụi và bình thường với chúng ta, một thế giới thăm thẳm và biến ảo khôn lường của các thánh thần.
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="info_detail">
+            <h4>
+              ABOUT US
+            </h4>
+            <p>
+              Mọi thắc mắc cần được giải đáp xin liên hệ qua các trang mạng xã hội bên dưới.
+              <br><br>Cảm ơn vì bạn đã đến!
+            </p>
+            <div class="info_social">
+              <a href="" class="mr-4">
+                <i class="fa-brands fa-facebook-f fa-2xl""></i>
+              </a>
+              <a href="" class="mr-4">
+                <i class="fa-brands fa-twitter fa-2xl"></i>
+              </a>
+              <a href="" class="mr-4">
+                <i class="fa-brands fa-youtube fa-2xl"></i>
+              </a>
+              <a href="" >
+                <i class="fa-brands fa-instagram fa-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="info_contact">
+            <h4>
+              ADDRESS
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  LOCATION
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  CALL +84 939968135
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  nhutanhngxx@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="info_contact">
+            <h4>
+              NEWSLETTER
+            </h4>
+            <form action="#">
+              <input class="form-control" type="text" placeholder="Enter email" />
+              <button type="submit">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+<script>
+  $('input.input-qty').each(function() {
+    var $this = $(this),
+      qty = $this.parent().find('.is-form'),
+      min = Number($this.attr('min')),
+      max = Number($this.attr('max'))
+    if (min == 0) {
+      var d = 0
+    } else d = min
+    $(qty).on('click', function() {
+      if ($(this).hasClass('minus')) {
+        if (d > min) d += -1
+      } else if ($(this).hasClass('plus')) {
+        var x = Number($this.val()) + 1
+        if (x <= max) d += 1
+      }
+      $this.attr('value', d).val(d)
+    })
+  })
+ </script>
+
+<script src="../js/detail.js"></script>
+</html>

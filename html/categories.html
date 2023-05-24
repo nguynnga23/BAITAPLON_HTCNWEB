@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="../images/favicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Cửa hàng sách</title>
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/bootstrap.js"></script>
+  <!-- font awesome style -->
+  <link href="../css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="../css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../css/responsive.css" rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+  <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.css">
+</head>
+
+<body class="sub_page">
+
+  <header id="header">
+  </header>
+ 
+   <script>
+     $(function(){
+       $("#header").load("header.html");
+     });
+   </script>
+
+
+
+  <!-- catagory section -->
+
+  <section class="catagory_section">
+    <div class="catagory_container">
+      <div class="row">
+
+        <!-- phần lọc sách -->
+
+        <div class="col-3 locSach pr-4">
+          <div class="title mt-3 mb-4">
+            <i class="fa-solid fa-filter fa-xl"></i> LỌC SÁCH THEO
+          </div>
+          <div class="form-group">
+            <label class="mb-1">Giá sách</label> <br>
+            <div class="ml-3">
+              <select name="locGia" id="locGia">
+                <option value="">Dưới 100.000 vnđ</option>
+                <option value="">Trên 100.000 vnđ - 200.000 vnđ</option>
+                <option value="locGia">Trên 200.000 vnđ</option>
+              </select>
+              <label class="text-secondary mb-1" style="font-size: 13px;">Chọn khoảng giá</label>
+              <div>
+                <input type="number" name="" id="min" class="min"></input> -
+                <input type="number" name="" id="max" class="max"></input>
+              </div>
+              <button type="button" class="btn btn-block" id="apDung">Áp dụng</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="mb-1">Thương hiệu</label>
+            <div class="ml-3">
+              <select name="thuongHieu" id="thuongHieu">
+                <option value="">Deli</option>
+                <option value="">Thiên Long</option>
+                <option value="locGia">KLONG</option>
+                <option value="">Hồng Hà</option>
+                <option value="">Flexoffice</option>
+                <option value="locGia">Campus</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="mb-1">Nhà cung cấp</label>
+            <div class="ml-3">
+              <select name="nhaCungCap" id="nhaCungCap">
+                <option value="">Nhà sách Fahasha</option>
+                <option value="">Nhà Sách Vĩnh Thụy</option>
+                <option value="locGia">Nhà Sách Trẻ Online</option>
+                <option value="">Tiệm Sách Hoa Hồng</option>
+                <option value="">VBooks</option>
+                <option value="locGia">Campus</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <button type="button" class="btn btn-block" id="timSach">TÌM</button>
+          </div>
+        </div>
+
+        <!-- <div class="col-1"></div> -->
+
+        <!-- phần kho sách -->
+
+        <div class="col-9 pl-4 khosach">
+          <div class="mt-3 mb-4 nhaSachCuaToi">
+            <i class="fa-solid fa-store fa-xl"></i> NHÀ SÁCH CỦA TÔI
+          </div>
+          <div>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="khoahoc-tab" data-toggle="tab" href="#khoahoc" role="tab"
+                  aria-controls="khoahoc" aria-selected="true">Khoa học viễn tưởng</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tinhcam-tab" data-toggle="tab" href="#tinhcam" role="tab"
+                  aria-controls="tinhcam" aria-selected="false">Tình cảm</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="camhung-tab" data-toggle="tab" href="#camhung" role="tab"
+                  aria-controls="camhung" aria-selected="false">Truyền cảm hứng</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tutruyen-tab" data-toggle="tab" href="#tutruyen" role="tab"
+                  aria-controls="tutruyen" aria-selected="false">Tự truyện</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tamly-tab" data-toggle="tab" href="#tamly" role="tab" aria-controls="tamly"
+                  aria-selected="false">Tâm lý học</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="kynang-tab" data-toggle="tab" href="#kynang" role="tab" aria-controls="kynang"
+                  aria-selected="false">Kỹ năng sống</a>
+              </li>
+            </ul>
+
+            <div class="tab-content mt-3" id="myTabContent">
+              <div class="tab-pane fade show active" id="khoahoc" role="tabpanel" aria-labelledby="khoahoc-tab">
+                <div class="row">
+                  <div class="col-3">
+                    <a href="../html/detail.html"><img src="../images/sach/NhungViThanNuocMy.jpg" alt=""
+                        height="250px"></a>
+                    <div class="nameBook mt-2">
+                      <a href="">Những vị thần nước Mỹ</a>
+                    </div>
+
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (425 đánh giá)</span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href="../html/detail.html"><img src="../images/sach/XuCat.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Xứ Cát
+                    </div>
+
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/ThuVienNuaDem.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Thư viện nửa đêm
+                    </div>
+
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+                  
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/NoiKhuRungChamToiNhungViSao.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Nơi khu rừng chạm tới những vì sao
+                    </div>
+
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/MatBiec.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Mắt biếc
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/VoTinhThuongNho.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Vô tình thương nhớ, cố tình thương nhau
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/RungNaUy.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Rừng Na Uy
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/NhungConChimAnMinhChoChet.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Những con chim ẩn mình chờ chết
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab-pane fade" id="camhung" role="tabpanel" aria-labelledby="camhung-tab">
+                <div class="row">
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/DacNhanTam.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Đắc nhân tâm
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/NhaGiaKim.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Nhà giả kim
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TuoiTreDangGiaBaoNhieu.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Tuổi trẻ đáng giá bao nhiêu
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/NghiGiauVaLamGiau.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Think And Grow Rich - Nghĩ Giàu Và Làm Giàu
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TriTueDoThai.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Trí tuệ Do Thái
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/DanOngSaoHoaDanBaSaoKim.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Đàn ông sao hỏa, đàn bà sao kim
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/ThietKeCuocDoiThinhVuong.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Thiết kế cuộc đời thịnh vượng
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TrenDuongBang.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Trên đường băng
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab-pane fade" id="tinhcam" role="tabpanel" aria-labelledby="tinhcam-tab">
+                <div class="row">
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/MatBiec.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Mắt biếc
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/VoTinhThuongNho.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Vô tình thương nhớ, cố tình thương nhau
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/RungNaUy.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Rừng Na Uy
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/NhungConChimAnMinhChoChet.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Những con chim ẩn mình chờ chết
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TriTueDoThai.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Trí tuệ Do Thái
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/DanOngSaoHoaDanBaSaoKim.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Đàn ông sao hỏa, đàn bà sao kim
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/ThietKeCuocDoiThinhVuong.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Thiết kế cuộc đời thịnh vượng
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TrenDuongBang.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Trên đường băng
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TamLyHocToiPham.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Tâm lý tội phạm
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/ThaoTungTamLy.jpeg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Thao túng tâm lý
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/ThienTaiBenTraiKeDienBenPhai.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Thiên tài bên trái, kẻ điên bên phải
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/NoiKhuRungChamToiNhungViSao.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Nơi khu rừng chạm tới những vì sao
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/NhungViThanNuocMy.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Những vị thần nước Mỹ
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/XuCat.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Xứ Cát
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/ThuVienNuaDem.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Thư viện nửa đêm
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/NoiKhuRungChamToiNhungViSao.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Nơi khu rừng chạm tới những vì sao
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab-pane fade" id="tutruyen" role="tabpanel" aria-labelledby="tutruyen-tab">
+                <div class="row">
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TuoiTreHoangDai.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Tuổi trẻ hoang dại
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TuTruyenBenjaminFranklin.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Tự truyện Benjamin Franklin
+                    </div>
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/MienDatHua.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Miền đất hứa
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TamHuyeTraoDoi.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Tâm huyết trao đời
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TriTueDoThai.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Trí tuệ Do Thái
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/DanOngSaoHoaDanBaSaoKim.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Đàn ông sao hỏa, đàn bà sao kim
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/ThietKeCuocDoiThinhVuong.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Thiết kế cuộc đời thịnh vượng
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TrenDuongBang.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Trên đường băng
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/DacNhanTam.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Đắc nhân tâm
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/NhaGiaKim.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Nhà giả kim
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TuoiTreDangGiaBaoNhieu.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Tuổi trẻ đáng giá bao nhiêu
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/NghiGiauVaLamGiau.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Think And Grow Rich - Nghĩ Giàu Và Làm Giàu
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </div>
+
+              <div class="tab-pane fade" id="tamly" role="tabpanel" aria-labelledby="tamly-tab">
+                <div class="row">
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TamLyHocToiPham.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Tâm lý tội pham
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/ThaoTungTamLy.jpeg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Thao túng tâm lý
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/ThienTaiBenTraiKeDienBenPhai.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Thiên tài bên trái, kẻ điên bên phải
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/NoiKhuRungChamToiNhungViSao.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Nơi khu rừng chạm tới những vì sao
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/NhungViThanNuocMy.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Những vị thần nước Mỹ
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/XuCat.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Xứ Cát
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/ThuVienNuaDem.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Thư viện nửa đêm
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/NoiKhuRungChamToiNhungViSao.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Nơi khu rừng chạm tới những vì sao
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TriTueDoThai.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Trí tuệ Do Thái
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/DanOngSaoHoaDanBaSaoKim.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Đàn ông sao hỏa, đàn bà sao kim
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/ThietKeCuocDoiThinhVuong.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Thiết kế cuộc đời thịnh vượng
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TrenDuongBang.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Trên đường băng
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/MatBiec.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Mắt biếc
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/VoTinhThuongNho.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Vô tình thương nhớ, cố tình thương nhau
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/RungNaUy.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Rừng Na Uy
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/NhungConChimAnMinhChoChet.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Những con chim ẩn mình chờ chết
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab-pane fade" id="kynang" role="tabpanel" aria-labelledby="kynang-tab">
+                <div class="row">
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TriTueDoThai.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Trí tuệ Do Thái
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/DanOngSaoHoaDanBaSaoKim.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Đàn ông sao hỏa, đàn bà sao kim
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/ThietKeCuocDoiThinhVuong.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Thiết kế cuộc đời thịnh vượng
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TrenDuongBang.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Trên đường băng
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TuoiTreHoangDai.jpg" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Tuổi trẻ hoang dại
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TuTruyenBenjaminFranklin.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Tự truyện Benjamin Franklin
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/MienDatHua.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Miền đất hứa
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <a href=""><img src="../images/sach/TamHuyeTraoDoi.png" alt="" height="250px"></a>
+                    <div class="nameBook mt-2">
+                      Tâm huyết trao đời
+                    </div>
+                    
+                    <div class="rating">
+                      <div>
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <img src="../images/star.png" alt="">
+                        <span class="text-muted"> (353 đánh giá) </span>
+                      </div>
+                      <p class="text-muted">Đã bán 101</p>
+                    </div>
+
+                    <div class="price mb-4">
+                      <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+                      <div class="text-secondary">
+                        <del>250.000 đ</del>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="info_detail">
+            <h4>
+              ABOUT US
+            </h4>
+            <p>
+              Mọi thắc mắc cần được giải đáp xin liên hệ qua các trang mạng xã hội bên dưới.
+              <br><br>Cảm ơn vì bạn đã đến!
+            </p>
+            <div class="info_social">
+              <a href="" class="mr-4">
+                <i class="fa-brands fa-facebook-f fa-2xl""></i>
+              </a>
+              <a href="" class=" mr-4">
+                  <i class="fa-brands fa-twitter fa-2xl"></i>
+              </a>
+              <a href="" class="mr-4">
+                <i class="fa-brands fa-youtube fa-2xl"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-instagram fa-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="info_contact">
+            <h4>
+              ADDRESS
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  LOCATION
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  CALL +84 939968135
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  nhutanhngxx@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="info_contact">
+            <h4>
+              NEWSLETTER
+            </h4>
+            <form action="#">
+              <input class="form-control" type="text" placeholder="Enter email" />
+              <button type="submit">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

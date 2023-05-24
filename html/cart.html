@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="../images/logo-2.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Cửa hàng sách</title>
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/bootstrap.js"></script>
+  <!-- font awesome style -->
+  <link href="../css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="../css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../css/responsive.css" rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+  <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.css">
+
+  <style>
+    .buttons_added {
+      opacity: 1;
+      display: inline-block;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      white-space: nowrap;
+      vertical-align: top;
+    }
+
+    .is-form {
+      overflow: hidden;
+      position: relative;
+      background-color: #f9f9f9;
+      height: 2.2rem;
+      width: 1.9rem;
+      padding: 0;
+      text-shadow: 1px 1px 1px #fff;
+      border: 1px solid #ddd;
+    }
+
+    .is-form:focus,
+    .input-text:focus {
+      outline: none;
+    }
+
+    .is-form.minus {
+      border-radius: 4px 0 0 4px;
+    }
+
+    .is-form.plus {
+      border-radius: 0 4px 4px 0;
+    }
+
+    .input-qty {
+      background-color: #fff;
+      height: 2.2rem;
+      text-align: center;
+      font-size: 1rem;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      border-left: 0;
+      border-right: 0;
+      padding: 0;
+    }
+
+    .input-qty::-webkit-outer-spin-button,
+    .input-qty::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  </style>
+  
+</head>
+
+<body class="sub_page">
+
+  <header id="header">
+  </header>
+ 
+   <script>
+     $(function(){
+       $("#header").load("header.html");
+     });
+   </script>
+
+  <section class="cart_section">
+    <div class="cart_container m-4">
+      <div class="main m-4 mb-10">
+        <!-- <div class="row">
+          <div class="link text-muted col-md-12 p-0">
+            <a class="text-muted" href="../html/index.html">HOME</a> \
+            <a class="text-muted" href="../html/categories.html">BOOKS CATEGORIES</a>
+          </div> -->
+        </div>
+        <!-- Row 1 -->
+        <div class="row mb-4">
+          <div class="col-md-12 p-0">
+            <h5 style="font-size: 20px;">
+              <i class="fa-solid fa-basket-shopping fa-xl pr-2" style="color: #454e4d;"></i>
+              <b>GIỎ HÀNG</b></h5>
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="row mb-4">
+          <div class="col-md-1">
+            <input type="checkbox">
+          </div>
+          <div class="col-md-4">
+            <p class="font-weight-bold">Tất cả (3 sản phẩm)</p>
+          </div>
+          <div class="col-md-2">
+            <p class="font-weight-bold">Đơn giá</p>
+          </div>
+          <div class="col-md-2">
+            <p class="font-weight-bold">Số lượng</p>
+          </div>
+          <div class="col-md-2">
+            <p class="font-weight-bold">Thành tiền</p>
+          </div>
+          <div class="col-md-1">
+            <img src="../images/delete.png" alt="">
+          </div>
+        </div>
+        <hr>
+        <!-- Row 3 -->
+        <div class="row mb-4">
+          <div class="col-md-1">
+            <input type="checkbox">
+          </div>
+
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-sm-4">
+                <img src="../images/sach/DacNhanTam.png" alt="" height="150px">
+              </div>
+              <div class="col-sm-8 mt-5">
+                <h4 class="">Đắc Nhân Tâm</h4>
+                <img src="../images/delivery-truck.png" alt="">
+                <span class="text-success"><B>GIAO SIÊU TỐC</B></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2 mt-5">
+            <p> <b>56.100 <u>đ</u></b></p> <span class="text-muted"><strike>86.000 <u>đ</u></strike></span>
+          </div>
+          <div class="col-md-2 mt-5">
+            <div class="buttons_added">
+              <input class="minus is-form" type="button" value="-">
+              <input aria-label="quantity" class="input-qty" max="30" min="1" name="" type="number" value="1">
+              <input class="plus is-form" type="button" value="+">
+            </div>
+          </div>
+          <div class="col-md-2 mt-5">
+            <p class="text-danger"><b>56.100 <u>đ</u></b></p>
+          </div>
+          <div class="col-md-1 mt-5">
+            <img src="../images/delete.png" alt="">
+          </div>
+        </div>
+        <hr>
+        <!-- Row 4 -->
+        <div class="row mb-4">
+          <div class="col-md-1">
+            <input type="checkbox">
+          </div>
+
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-sm-4">
+                <img src="../images/sach/NhungViThanNuocMy.jpg" alt="" height="150px">
+              </div>
+              <div class="col-sm-8 mt-4">
+                <h4 class="">Những Vị Thần Nước Mỹ</h4>
+                <img src="../images/delivery-truck.png" alt="">
+                <span class="text-success"><B>GIAO SIÊU TỐC</B></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2 mt-5">
+            <p> <b>162.500 <u>đ</u></b></p> <span class="text-muted"><strike>250.000 <u>đ</u></strike></span>
+          </div>
+          <div class="col-md-2 mt-5">
+            <div class="buttons_added">
+              <input class="minus is-form" type="button" value="-">
+              <input aria-label="quantity" class="input-qty" max="30" min="1" name="" type="number" value="1">
+              <input class="plus is-form" type="button" value="+">
+            </div>
+            <p class="text-warning mt-1">Chỉ còn 5 sản phẩm</p>
+          </div>
+          <div class="col-md-2 mt-5">
+            <p class="text-danger"><b>162.500 <u>đ</u></b></p>
+          </div>
+          <div class="col-md-1 mt-5">
+            <img src="../images/delete.png" alt="">
+          </div>
+        </div>
+        <hr>
+        <!-- Row 5 -->
+        <div class="row mb-4">
+          <div class="col-md-1">
+            <input type="checkbox">
+          </div>
+
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-sm-4">
+                <img src="../images/sach/NhaGiaKim.png" alt="" height="150px">
+              </div>
+              <div class="col-sm-8 mt-5">
+                <h4 class="">Nhà Giả Kim</h4>
+                <img src="../images/delivery-truck.png" alt="">
+                <span class="text-success"><B>GIAO TIẾT KIỆM</B></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2 mt-5">
+            <p> <b>64.950 <u>đ</u></b></p>
+          </div>
+          <div class="col-md-2 mt-5">
+            <div class="buttons_added">
+              <input class="minus is-form" type="button" value="-">
+              <input aria-label="quantity" class="input-qty" max="30" min="1" name="" type="number" value="1">
+              <input class="plus is-form" type="button" value="+">
+            </div>
+
+          </div>
+          <div class="col-md-2 mt-5">
+            <p class="text-danger"><b>64.950 <u>đ</u></b></p>
+          </div>
+          <div class="col-md-1 mt-5">
+            <img src="../images/delete.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-12 p-0">
+        <h5>
+          <i class="fa-solid fa-circle-info fa-xl pr-2" style="color: #454e4d;"></i>
+          <b>ĐỀ XUẤT SÁCH TƯƠNG TỰ</b></h5>
+      </div>
+    </div>
+
+    <section class="listBook_section">
+        <div class="row">
+          <div class="col-3">
+            <a href="../html/detail.html"><img src="../images/sach/TriTueDoThai.png" alt="" height="250px"></a>
+            <div class="nameBook mt-2">
+              <a href="">Trí tuệ Do Thái</a>
+            </div>
+  
+            <div class="rating">
+              <div>
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <span class="text-muted"> (425 đánh giá)</span>
+              </div>
+              <p class="text-muted">Đã bán 101</p>
+            </div>
+  
+            <div class="price mb-4">
+              <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+              <div class="text-secondary">
+                <del>250.000 đ</del>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <a href="../html/detail.html"><img src="../images/sach/DanOngSaoHoaDanBaSaoKim.png" alt="" height="250px"></a>
+            <div class="nameBook mt-2">
+              Đàn ông sao hỏa, đàn bà sao kim
+            </div>
+  
+            <div class="rating">
+              <div>
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <span class="text-muted"> (353 đánh giá) </span>
+              </div>
+              <p class="text-muted">Đã bán 101</p>
+            </div>
+  
+            <div class="price mb-4">
+              <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+              <div class="text-secondary">
+                <del>250.000 đ</del>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <a href=""><img src="../images/sach/ThietKeCuocDoiThinhVuong.png" alt="" height="250px"></a>
+            <div class="nameBook mt-2">
+              Thiết kế cuộc đời thịnh vượng
+            </div>
+  
+            <div class="rating">
+              <div>
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <span class="text-muted"> (353 đánh giá) </span>
+              </div>
+              <p class="text-muted">Đã bán 101</p>
+            </div>
+  
+            <div class="price mb-4">
+              <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+              <div class="text-secondary">
+                <del>250.000 đ</del>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <a href=""><img src="../images/sach/TrenDuongBang.png" alt="" height="250px"></a>
+            <div class="nameBook mt-2">
+              Trên đường băng
+            </div>
+  
+            <div class="rating">
+              <div>
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <span class="text-muted"> (353 đánh giá) </span>
+              </div>
+              <p class="text-muted">Đã bán 101</p>
+            </div>
+  
+            <div class="price mb-4">
+              <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+              <div class="text-secondary">
+                <del>250.000 đ</del>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-3">
+            <a href="../html/detail.html"><img src="../images/sach/NhungViThanNuocMy.jpg" alt=""
+                height="250px"></a>
+            <div class="nameBook mt-2">
+              <a href="">Những vị thần nước Mỹ</a>
+            </div>
+  
+            <div class="rating">
+              <div>
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <span class="text-muted"> (425 đánh giá)</span>
+              </div>
+              <p class="text-muted">Đã bán 101</p>
+            </div>
+  
+            <div class="price mb-4">
+              <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+              <div class="text-secondary">
+                <del>250.000 đ</del>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <a href="../html/detail.html"><img src="../images/sach/XuCat.jpg" alt="" height="250px"></a>
+            <div class="nameBook mt-2">
+              Xứ Cát
+            </div>
+  
+            <div class="rating">
+              <div>
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <span class="text-muted"> (353 đánh giá) </span>
+              </div>
+              <p class="text-muted">Đã bán 101</p>
+            </div>
+  
+            <div class="price mb-4">
+              <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+              <div class="text-secondary">
+                <del>250.000 đ</del>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <a href=""><img src="../images/sach/ThuVienNuaDem.jpg" alt="" height="250px"></a>
+            <div class="nameBook mt-2">
+              Thư viện nửa đêm
+            </div>
+  
+            <div class="rating">
+              <div>
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <span class="text-muted"> (353 đánh giá) </span>
+              </div>
+              <p class="text-muted">Đã bán 101</p>
+            </div>
+          
+            <div class="price mb-4">
+              <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+              <div class="text-secondary">
+                <del>250.000 đ</del>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <a href=""><img src="../images/sach/NoiKhuRungChamToiNhungViSao.jpg" alt="" height="250px"></a>
+            <div class="nameBook mt-2">
+              Nơi khu rừng chạm tới những vì sao
+            </div>
+  
+            <div class="rating">
+              <div>
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <img src="../images/star.png" alt="">
+                <span class="text-muted"> (353 đánh giá) </span>
+              </div>
+              <p class="text-muted">Đã bán 101</p>
+            </div>
+  
+            <div class="price mb-4">
+              <div class="text-danger font-weight-bold newPrice">225.000 đ</div>
+              <div class="text-secondary">
+                <del>250.000 đ</del>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <button type="button" class="btn" id="seeMore">
+            <i class="fa-solid fa-angles-left pr-2"></i>
+            See more
+            <i class="fa-solid fa-angles-right pl-2"></i>
+          </button>
+        </div>
+    </section>
+
+  </section>
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="info_detail">
+            <h4>
+              ABOUT US
+            </h4>
+            <p>
+              Mọi thắc mắc cần được giải đáp xin liên hệ qua các trang mạng xã hội bên dưới.
+              <br><br>Cảm ơn vì bạn đã đến!
+            </p>
+            <div class="info_social">
+              <a href="" class="mr-4">
+                <i class="fa-brands fa-facebook-f fa-2xl""></i>
+              </a>
+              <a href="" class=" mr-4">
+                  <i class="fa-brands fa-twitter fa-2xl"></i>
+              </a>
+              <a href="" class="mr-4">
+                <i class="fa-brands fa-youtube fa-2xl"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-instagram fa-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="info_contact">
+            <h4>
+              ADDRESS
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  LOCATION
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  CALL +84 939968135
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  nhutanhngxx@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="info_contact">
+            <h4>
+              NEWSLETTER
+            </h4>
+            <form action="#">
+              <input class="form-control" type="text" placeholder="Enter email" />
+              <button type="submit">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+<script> 
+  $('input.input-qty').each(function() {
+    var $this = $(this),
+      qty = $this.parent().find('.is-form'),
+      min = Number($this.attr('min')),
+      max = Number($this.attr('max'))
+    if (min == 0) {
+      var d = 0
+    } else d = min
+    $(qty).on('click', function() {
+      if ($(this).hasClass('minus')) {
+        if (d > min) d += -1
+      } else if ($(this).hasClass('plus')) {
+        var x = Number($this.val()) + 1
+        if (x <= max) d += 1
+      }
+      $this.attr('value', d).val(d)
+    })
+  })
+</script>
+</html>

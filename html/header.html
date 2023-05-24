@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Basic -->
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <!-- Mobile Metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+   <!-- Site Metas -->
+   <link rel="icon" href="../images/favicon.png" type="image/gif" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <meta name="author" content="" />
+   <title>Cửa hàng sách</title>
+
+   <!-- bootstrap core css -->
+   <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" /> -->
+   <link rel="stylesheet" href="../css/bootstrap.min.css">
+   <script src="../js/jquery-3.4.1.min.js"></script>
+   <script src="../js/bootstrap.js"></script> 
+   <!-- font awesome style -->
+   <link href="../css/font-awesome.min.css" rel="stylesheet" />
+   <!-- Custom styles for this template -->
+   <link href="../css/style.css" rel="stylesheet" />
+ 
+   <!-- responsive style -->
+   <link href="../css/responsive.css" rel="stylesheet" /> 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+   <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.css">
+   <script src="../js/account.js"></script>
+   <script src="../js/popper.min.js"></script>
+   <script src="../js/bootstrap.bundle.min.js"></script>
+
+
+</head>
+<body>
+    <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="../html/index.html">
+              <span>
+                <img src="../images/logo.png" alt="" height="65px">
+              </span>
+            </a>
+            <button class="navbar-toggler text-success" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-2 menu-nav">
+                <li class="nav-item">
+                  <a href="../html/index.html" class="nav-link">HOME</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a href="../html/categories.html" class="nav-link">CATEGORIES</a>
+                </li> -->
+                <li  class="nav-item">
+                  <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle font-weight-bold" data-toggle="dropdown">
+                      CATEGORIES
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="../html/categories.html">Book Categories</a>
+                      <a class="dropdown-item" href="../html/BOOK_khoahocvientuong.html">Sách Khoa học Viễn tưởng</a>
+                      <a class="dropdown-item" href="../html/BOOK_tinhcam.html">Sách Tình cảm</a>
+                      <a class="dropdown-item" href="../html/BOOK_truyencamhung.html">Sách Truyền cảm hứng</a>
+                      <a class="dropdown-item" href="../html/BOOK_tutruyen.html">Sách Tự truyện</a>
+                      <a class="dropdown-item" href="../html/BOOK_tamlyhoc.html">Sách Tâm lý học</a>
+                      <a class="dropdown-item" href="../html/BOOK_kynangsong.html">Sách Kỹ năng sống</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="../html/about.html" class="nav-link">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                  <a href="../html/contact.html" class="nav-link">
+                    CONTACT US
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../html/cart.html" class="nav-link">
+                    <i class="fa-solid fa-basket-shopping fa-lg nav-link" title="Giỏ hàng"></i>
+                  </a>
+                </li>
+                
+                <li class="nav-item" >
+                  <a href="../html/account.html" class="nav-link" id="login">
+                    <i class="fa-solid fa-user fa-lg nav-link" title="Đăng nhập"></i>
+                  </a>
+                </li>
+
+                <li class="nav-item" >
+                  <a href="#" class="text-success" type="button" data-toggle="modal" data-target="#TTTaiKhoan" id="user-info" class="nav-link"></a>
+                </li>
+
+                <li class="nav-item" >
+                  <a href="#" class="nav-link" id="logout" style="display: none;">
+                    <i class="fa-solid fa-right-from-bracket nav-link" title="Đăng xuất"></i>
+                  </a>
+                </li>
+              </ul>
+              <from class="search_form">
+                <input type="text" class="form-control" placeholder="Search here...">
+                <button type="submit">
+                  <i class="search-link fa-solid fa-magnifying-glass" title="Tìm kiếm"></i>
+                </button>
+              </from>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+
+  <div class="modal fade" id="TTTaiKhoan">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title col text-center">THÔNG TIN TÀI KHOẢN</h3>
+        </div>
+        <div class="modal-body pl-5 pr-5">
+          <h6 class=""><b>Thông tin cá nhân</b></h6>
+          <div class="form-group row">
+            <label class="col-4">Tên tài khoản: </label>
+            <input class="col-8" type="text" name="" id="txtLoginUsername"></input>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-4">Họ tên: </label>
+            <input class="col-8" type="text" name="" id="txtLoginFullname"></input>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-4">Địa chỉ: </label>
+            <input class="col-8" type="text" name="" id="txtLoginAddress"></input>
+          </div>
+<hr>
+          <h6 class=""><b>Số điện thoại và Email</b></h6>
+          <div class="form-group row">
+            <label class="col-4">Số điện thoại: </label>
+            <input class="col-8" type="text" name="" id="txtLoginPhone"></input>
+          </div>
+          <div class="form-group row">
+            <label class="col-4">Địa chỉ email: </label>
+            <input class="col-8" type="text" name="" id="txtLoginEmail"></input>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-block" data-dismiss="modal">ĐÓNG</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+</body>
+
+<script>
+  var loggedInFullName = localStorage.getItem('loggedInFullName');
+  var loggedInUser = localStorage.getItem('loggedInUser');
+  var loggedInAddress = localStorage.getItem('loggedInAddress');
+  var loggedInPhone = localStorage.getItem('loggedInPhone');
+  var loggedInEmail = localStorage.getItem('loggedInEmail');
+
+  if (loggedInFullName) {
+    $('#user-info').text(loggedInFullName);
+    $("#login").hide()
+    $("#logout").show()
+  }
+
+  $("#user-info").click(function(event){
+
+   $("#txtLoginUsername").val(loggedInUser);
+   $("#txtLoginFullname").val(loggedInFullName);
+   $("#txtLoginAddress").val(loggedInAddress);
+   $("#txtLoginPhone").val(loggedInPhone);
+   $("#txtLoginEmail").val(loggedInEmail);
+
+  })
+
+  $("#logout").click(function(event){
+    localStorage.removeItem("loggedInFullName");
+    localStorage.removeItem("loggedInAddress");
+    localStorage.removeItem("loggedInEmail");
+    localStorage.removeItem("loggedInUser");
+    localStorage.removeItem("loggedInPhone");
+
+    $("#user-info").remove();
+    $("#login").show()
+    $("#logout").hide()
+    window.location.href = "account.html";
+  })
+
+</script>
+</html>
